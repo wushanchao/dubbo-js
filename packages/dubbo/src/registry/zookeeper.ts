@@ -81,7 +81,7 @@ export class ZkRegistry extends Registry<IZkClientProps & IDubboRegistryProps> {
         this._getDubboServiceUrls(dubboServicePath, inf),
       );
 
-      // 重连进入init后不能清空已有provider, 会导致运行中的请求找到, 报no agents错误
+      // 重连进入init后不能清空已有provider, 会导致运行中的请求找不到, 报no agents错误
       // 或者zk出现出错了, 无法获取provider, 那么之前获取的还能继续使用
       if (err) {
         log(`getChildren ${dubboServicePath} error ${err}`);
