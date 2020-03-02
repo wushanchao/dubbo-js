@@ -69,7 +69,7 @@ const matchRuler = matcher
     group: '',
   });
 
-dubbo.use(dubboInvoke(matchRuler));
+dubbo.use(dubboInvoker(matchRuler));
 ```
 
 <strong> 我想应该还有其他的花式玩法，㊗ ️😊 </strong>
